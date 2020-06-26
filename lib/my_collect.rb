@@ -1,12 +1,11 @@
-require 'pry'
 def my_collect(array)
-    collection = []
-    counter = 0
-    while counter < array.length 
-        collection << (yield array[counter])
-        counter += 0
-    end
-    collection
-   
+  i = 0
+  result = []
+  while i < array.length
+    result.push(yield array[i])
+      i += 1
+  end
+  result
 end
+
 
